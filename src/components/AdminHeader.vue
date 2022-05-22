@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="/" class="navbar-brand">Pharmacy automatization</a>
+    <a href="/pharmacies" class="navbar-brand">Pharmacy automatization</a>
     <div class="navbar-nav mr-auto">
       <li class="nav-item">
         <router-link to="/pharmacies" class="nav-link">Pharmacies</router-link>
