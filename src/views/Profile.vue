@@ -1,5 +1,5 @@
 <template>
-	<div class="container userProfile">
+	<div class="userProfile">
 		<header class="jumbotron pageHeader shadow">
 			<h3>User profile page</h3>
 		</header>
