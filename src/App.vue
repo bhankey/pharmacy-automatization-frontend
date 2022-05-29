@@ -38,6 +38,20 @@ export default {
 	--offset: 32px;
 	--offsetHalf: calc(var(--offset) / 2);
 	--offsetTwice: calc(var(--offset) * 2);
+
+	--yellow: #ffba08;
+	--black: #0f0f0f;
+	--white: #ffffff;
+	--grayLight: #fbfbfb;
+	--blue: #337ca0;
+	--opal: #f26157;
+
+	--yellowRGB: 255, 186, 8;
+	--blackRGB: 0, 0, 0;
+	--whiteRGB: 255, 255, 255;
+	--grayLightRGB: 250, 250, 250;
+	--blueRGB: 51, 124, 160;
+	--opalRGB: 242, 97, 87;
 }
 
 </style>
