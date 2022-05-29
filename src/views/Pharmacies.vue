@@ -45,7 +45,7 @@
 			</div>
 		</Form>
 
-		<div class="table">
+		<div class="table shadow">
 			<div class="table_header">
 				<div>ID</div>
 				<div>Name</div>
