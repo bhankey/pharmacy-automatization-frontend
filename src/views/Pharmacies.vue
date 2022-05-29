@@ -1,7 +1,12 @@
 <template>
 	<div class="home">
-		<button v-if="!showCreation" class="btn btn-primary btn-block" @click="switchShowCreation">Show creation
+		<header class="jumbotron pageHeader shadow">
+			<h3>pharmacies</h3>
+		</header>
+
+		<button v-if="!showCreation" class="btn btn-primary btn-block creationButton" @click="switchShowCreation">Show creation
 		</button>
+
 		<Form v-if="showCreation" @submit="handlePharmacyCreation" :validation-schema="schema">
 			<!-- // TODO with modal -->
 			<div class="enter_wrapper">
@@ -40,9 +45,8 @@
 			</div>
 		</Form>
 
-
 		<div class="table">
-			<div class="table_row">
+			<div class="table_header">
 				<div>ID</div>
 				<div>Name</div>
 				<div>City</div>
@@ -158,6 +162,39 @@ export default defineComponent({
 <style scoped>
 .table {
 	text-align: left;
+	box-sizing: border-box;
+	border-radius: var(--offsetHalf);
+	margin-bottom: var(--offsetTwice);
+	overflow: hidden;
+}
+
+.table_row {
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-template-columns: repeat(5, 1fr);
+	gap: var(--offsetHalf);
+	align-items: center;
+	padding: var(--offsetHalf);
+	background-color: var(--whiteC);
+}
+
+.table_row:not(:last-child) {
+	border-radius: 0 0 var(--offsetHalf) var(--offsetHalf);
+}
+
+.table_header {
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-template-columns: repeat(5, 1fr);
+
+	gap: var(--offsetHalf);
+	align-items: center;
+	padding: var(--offsetHalf);
+
+	font-weight: bold;
+	border: 1px solid rgba(var(--opalRGB), 0.1);
+	border-radius: var(--offsetHalf) var(--offsetHalf) 0 0;
+	background-color: rgba(var(--opalRGB), 0.3);
 }
 
 .enter_wrapper {
@@ -190,6 +227,10 @@ export default defineComponent({
 
 .home {
 	margin: auto;
+}
+
+.creationButton {
+	margin-bottom: var(--offsetTwice);
 }
 
 </style>
