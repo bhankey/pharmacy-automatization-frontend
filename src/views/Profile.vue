@@ -1,6 +1,6 @@
 <template>
 	<div class="container userProfile">
-		<header class="jumbotron userProfile__header shadow">
+		<header class="jumbotron pageHeader shadow">
 			<h3>User profile page</h3>
 		</header>
 
@@ -65,24 +65,6 @@ export default {
 </script>
 
 <style>
-.userProfile__header {
-	border-radius: var(--offsetHalf);
-	background-image: var(--mainGradient);
-	margin-bottom: var(--offsetTwice);
-}
-
-.userProfile__header h3 {
-	margin: 0;
-	padding: 0;
-
-	font-weight: 800;
-	font-size: 2.8rem;
-	color: var(--whiteC);
-	text-shadow: 0 0.1rem 0.2rem rgba(var(--blackRGB), 0.8);
-
-	text-align: center;
-	text-transform: uppercase;
-}
 
 .userProfile__content {
 	border-radius: var(--offsetHalf);

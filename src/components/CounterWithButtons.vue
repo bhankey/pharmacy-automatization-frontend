@@ -50,6 +50,7 @@ export default {
 
 <style scoped>
 .block {
+	max-width: calc(var(--offset) * 4);
 	display: grid;
 	grid-template-columns: var(--offset) 1fr var(--offset);
 	align-items: center;
