@@ -4,7 +4,7 @@
 			<h3>pharmacies</h3>
 		</header>
 
-		<button v-if="!showCreation" class="btn btn-primary btn-block creationButton" @click="switchShowCreation">Show creation
+		<button v-if="!showCreation" class="btn btn-primary btn-block" @click="switchShowCreation">Show creation
 		</button>
 
 		<Form v-if="showCreation" @submit="handlePharmacyCreation" :validation-schema="schema">
@@ -33,12 +33,11 @@
 			</div>
 			<div class="form-group button">
 				<button class="btn btn-primary btn-block" :disabled="loading">
-            <span v-show="loading" class="spinner-border spinner-border-sm"
-            ></span>
+					<span v-show="loading" class="spinner-border spinner-border-sm"></span>
 					<span>Create</span>
 				</button>
 			</div>
-			<div class="form-group">
+			<div class="form-group alert">
 				<div v-if="message" class="alert alert-danger" role="alert">
 					{{ message }}
 				</div>
@@ -164,6 +163,7 @@ export default defineComponent({
 	text-align: left;
 	box-sizing: border-box;
 	border-radius: var(--offsetHalf);
+	margin-top: var(--offsetTwice);
 	margin-bottom: var(--offsetTwice);
 	overflow: hidden;
 }
@@ -199,38 +199,13 @@ export default defineComponent({
 
 .enter_wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
 
-	gap: 10px 10px;
-}
-
-.table_row {
-	display: grid;
-	grid-auto-rows: max-content;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	margin-bottom: 20px;
-	gap: 15px;
-}
-
-.button {
-	border: none;
-	color: white;
-	padding: 5px 5px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	width: 100%;
-	margin-bottom: 10px;
-	margin-top: 0;
+	gap: var(--offsetHalf);
 }
 
 .home {
 	margin: auto;
-}
-
-.creationButton {
-	margin-bottom: var(--offsetTwice);
 }
 
 </style>

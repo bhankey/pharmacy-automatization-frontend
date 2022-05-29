@@ -1,6 +1,7 @@
 .siteNav {
 	margin-bottom: var(--offsetTwice);
 	background-color: var(--black);
+	padding: var(--offsetHalf);
 }
 
 .menu a {

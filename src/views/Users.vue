@@ -4,7 +4,7 @@
 			<h3>users</h3>
 		</header>
 
-		<button v-if="!showCreation" class="btn btn-primary btn-block creationButton" @click="switchShowCreation">Show creation
+		<button v-if="!showCreation" class="btn btn-primary btn-block" @click="switchShowCreation">Show creation
 		</button>
 
 		<Form v-if="showCreation" @submit="handleUserCreation" :validation-schema="schema"> <!-- // TODO with modal -->
@@ -31,7 +31,7 @@
 				</div>
 				<div class="form-group">
 					<label for="role">Role</label>
-					<Field type="text" name="role" as="select" class="form-control">
+					<Field name="role" as="select" class="form-control">
 						<option value="admin">admin</option>
 						<option value="apothecary">apothecary</option>
 					</Field>
@@ -39,7 +39,7 @@
 				</div>
 				<div class="form-group">
 					<label for="default_pharmacy_id">Pharmacy</label>
-					<Field type="text" as="select" name="default_pharmacy_id" class="form-control">
+					<Field as="select" name="default_pharmacy_id" class="form-control">
 						<option v-for="item in pharmacies" :value="item.id" :key="item.id">{{ item.name }}</option>
 					</Field>
 					<ErrorMessage name="default_pharmacy_id" class="error-feedback"/>
@@ -52,7 +52,7 @@
 					<span>Create</span>
 				</button>
 			</div>
-			<div class="form-group">
+			<div class="form-group alert">
 				<div v-if="message" class="alert alert-danger" role="alert">
 					{{ message }}
 				</div>
@@ -213,6 +213,7 @@ export default defineComponent({
 	box-sizing: border-box;
 	border-radius: var(--offsetHalf);
 	margin-bottom: var(--offsetTwice);
+	margin-top: var(--offsetTwice);
 	overflow: hidden;
 }
 
@@ -247,17 +248,12 @@ export default defineComponent({
 
 .enter_wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
 
-	gap: 10px 10px;
+	gap: var(--offsetHalf);
 }
 
 .home {
 	margin: auto;
 }
-
-.creationButton {
-	margin-bottom: var(--offsetTwice);
-}
-
 </style>
