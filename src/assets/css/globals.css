@@ -1,0 +1,30 @@
+body {
+	background-color: var(--grayLight);
+}
+
+a {
+	transition: var(--mainTransition);
+}
+
+button.btn {
+	border: none;
+	border-radius: calc(var(--offsetHalf) / 2);
+
+	color: white;
+	padding: var(--offsetHalf);
+
+	text-align: center;
+	text-decoration: none;
+
+	font-size: 16px;
+	font-weight: bold;
+
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.enter_wrapper {
+	margin-bottom: var(--offset);
+}
+

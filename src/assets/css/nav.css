@@ -1,0 +1,43 @@
+.siteNav {
+	margin-bottom: var(--offsetTwice);
+	background-color: var(--black);
+	padding: var(--offsetHalf);
+}
+
+.menu a {
+	color: var(--grayLight);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.menu li:not(:last-child) {
+	margin-right: var(--offsetHalf);
+}
+
+.menu a:hover {
+	color: var(--opal);
+}
+
+.navbar-brand {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--grayLight);
+	margin-right: var(--offsetTwice);
+}
+
+.navbar-brand:hover {
+	color: var(--opal);
+}
+
+.profileNav a {
+	cursor: pointer;
+	color: var(--grayDark);
+}
+
+.profileNav li:not(:last-child) {
+	margin-right: var(--offsetHalf);
+}
+
+.profileNav a:hover {
+	color: var(--whiteC);
+}

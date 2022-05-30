@@ -1,0 +1,21 @@
+.form-group {
+	margin: 0;
+}
+
+.form-group.alert {
+	margin-top: var(--offset);
+	padding: 0;
+}
+
+.form-group.alert > div {
+	margin: 0;
+}
+
+.form-group label {
+	font-weight: bold;
+}
+
+.form-control {
+	padding: 10px;
+	border: 1px solid var(--grayDark);
+}

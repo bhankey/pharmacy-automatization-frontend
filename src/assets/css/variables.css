@@ -1,0 +1,28 @@
+:root {
+	--offset: 32px;
+	--offsetHalf: calc(var(--offset) / 2);
+	--offsetTwice: calc(var(--offset) * 2);
+
+	--yellow: #ffba08;
+	--black: #191919;
+	--whiteC: #ffffff;
+	--gray: #cccccc;
+	--grayLight: #fbfbfb;
+	--grayDark: #999999;
+	--blue: #337ca0;
+	--opal: #f26157;
+
+	--yellowRGB: 255, 186, 8;
+	--blackRGB: 25, 25, 25;
+	--whiteRGB: 255, 255, 255;
+	--grayRGB: 204, 204, 204;
+	--grayLightRGB: 250, 250, 250;
+	--grayDarkRGB: 153, 153, 153;
+	--blueRGB: 51, 124, 160;
+	--opalRGB: 242, 97, 87;
+
+	--mainTransition: all 250ms ease-in-out;
+
+	--mainGradient: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+

@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from './plugins/font-awesome'
 import setupInterceptors from './services/setupInterceptors';
 import 'vue-universal-modal/dist/index.css'
+import "./assets/css/style.css";
 
 setupInterceptors(store);
 
