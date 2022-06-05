@@ -71,6 +71,7 @@
 				</div>
 			</div>
 
+      <div style="margin-left: auto; margin-right: auto"> Summary price: {{this.reservationItems.sumPrice}}</div>
 			<footer class="purchase_window__footer">
 				<button @click="handleConfirmPurchase" class=" btn  btn-primary confirm_button">
 					Confirm
